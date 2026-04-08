@@ -1,0 +1,10 @@
+Spreadsheet Solutions
+
+1. Populate ticket_created_at:
+=XLOOKUP(A2, ticket!A:A, ticket!B:B)
+
+2. Same Day:
+=IF(DATE(created_at)=DATE(closed_at),"Yes","No")
+
+3. Same Hour:
+=IF(TEXT(created_at,"yyyy-mm-dd hh")=TEXT(closed_at,"yyyy-mm-dd hh"),"Yes","No")
